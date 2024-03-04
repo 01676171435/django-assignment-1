@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    food
+{% endblock %}
+
+{% block content %}
+<h1> food </h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for meal in degine %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ meal.strMealThumb }}" class="card-img-top" alt="{{ meal.strMeal }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ meal.strMeal }}</h5>
+                <p class="card-text" >costly food</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
